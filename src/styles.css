@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+
+.lightgray
+{
+    background-color: lightgray !important;
+}
+
+.pointer
+{
+    cursor: pointer !important;
+}
+
+.big-icon
+{
+    font-size: 8em !important;
+}
+
+.medium-icon
+{
+    font-size: 4em !important;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.5);
+}
+

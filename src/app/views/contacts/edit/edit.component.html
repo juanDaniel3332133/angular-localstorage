@@ -1,0 +1,133 @@
+<div class="animate__animated animate__fadeIn animate__fast">
+    
+    <app-header></app-header>
+    
+    <div class="p-4">
+        
+        <form class="row g-3" #form="ngForm" (submit)="onSubmit()">
+
+            <div class="col-6">
+                <h6 class="mt-2 text-muted">Identificacion:</h6>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" >
+                        <i class="fa fa-id-card" [ngClass]="{'text-danger': identification.touched && identification.invalid, 'text-success': identification.valid}"></i>
+                    </span>
+                    <input type="text" 
+                            #identification="ngModel" 
+                            [(ngModel)]="formData.identification" 
+                            required 
+                            onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+                            class="form-control" 
+                            placeholder="Identificacion" 
+                            name="identification"
+                            minlength="7"
+                            maxlength="8">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <h6 class="mt-2 text-muted">Nombres:</h6>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" >
+                        <i class="fa fa-pen" [ngClass]="{'text-danger': first_name.touched && first_name.invalid, 'text-success': first_name.valid}"></i>
+                    </span>
+                    <input type="text" 
+                            #first_name="ngModel" 
+                            [(ngModel)]="formData.first_name" 
+                            required 
+                            class="form-control" 
+                            placeholder="Nombres" 
+                            name="first_name">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <h6 class="mt-2 text-muted">Apellidos:</h6>
+                <div class="input-group mb-3">
+                <span class="input-group-text" >
+                        <i class="fa fa-pen" [ngClass]="{'text-danger': last_name.touched && last_name.invalid, 'text-success': last_name.valid}"></i>
+                    </span>
+                    <input type="text" 
+                            #last_name="ngModel" 
+                            [(ngModel)]="formData.last_name" 
+                            required 
+                            class="form-control" 
+                            placeholder="Apellidos" 
+                            name="last_name">
+                </div>
+            </div>
+            
+            <div class="col-6">
+                <h6 class="mt-2 text-muted">Direccion:</h6>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" >
+                        <i class="fa fa-map-marked-alt" [ngClass]="{'text-danger': address.touched && address.invalid, 'text-success': address.valid}"></i>
+                    </span>
+                    <textarea #address="ngModel" 
+                                [(ngModel)]="formData.address" 
+                                required 
+                                class="form-control" 
+                                placeholder="Direccion" 
+                                name="address"
+                    ></textarea>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <h6 class="mt-2 text-muted">Telefono:</h6>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" >
+                        <i class="fa fa-mobile-alt" [ngClass]="{'text-danger': phone.touched && phone.invalid, 'text-success': phone.valid}"></i>
+                    </span>
+                    <input type="text" 
+                            #phone="ngModel" 
+                            [(ngModel)]="formData.phone" 
+                            required 
+                            onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+                            class="form-control" 
+                            placeholder="Telefono" 
+                            name="phone"
+                            minlength="11"
+                            maxlength="11">
+                </div>
+            </div>
+           
+            <div class="col-6">
+                <h6 class="mt-2 text-muted">Fecha de nacimiento:</h6>
+                <div class="input-group mb-3">
+
+                    <span class="input-group-text" >
+                        <i class="fa fa-calendar-day" [ngClass]="{'text-danger': birth_date.touched && birth_date.invalid, 'text-success': birth_date.valid}"></i>
+                    </span>
+
+                    <input 
+                        readonly="" 
+                        class="form-control pointer"
+                        name="birth_date"
+                        #birth_date="ngModel"
+                        [(ngModel)]='formData.birth_date'
+                        required
+                        [owlDateTime]="_birth_date"
+                        [owlDateTimeTrigger]="_birth_date"
+                        placeholder="Fecha de nacimiento"
+                        [max]="maxBirthDate"
+                    >
+
+                    <owl-date-time 
+                        #_birth_date
+                        [pickerType]="'calendar'"
+                    ></owl-date-time>
+
+                </div>
+            </div>
+
+            <div class="col-12">
+                <button type="reset" class="btn btn-secondary ml-2 float-start">Limpiar</button>
+                <button type="submit" [disabled]="form.invalid" class="btn btn-primary mr-2 float-end">Actualizar</button>
+            </div>
+
+        </form>
+        
+    </div>
+
+</div>

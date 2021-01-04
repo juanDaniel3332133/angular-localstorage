@@ -1,0 +1,54 @@
+<div class="animate__animated animate__fadeIn animate__fast">
+    
+    <app-header></app-header>
+
+    <div class="p-4">
+
+        <div class="row text-center">
+        
+            <div class="offset-md-2 col-12 col-md-4 mb-1">
+                <div class="card lightgray hvr-sweep-to-right w-100">
+    
+                    <div class="card-body pb-0 text-center">
+                      <h5 class="m-2">
+                         {{totalContacts}}  Total contactos
+                      </h5>
+                      <div class="pb-4">
+                          <i class="big-icon fa fa-address-book"></i>
+                        </div>
+                    </div>
+    
+                  </div>
+            </div>
+           
+            <div class="col-12 col-md-4 mb-1">
+                <div class="card lightgray hvr-sweep-to-right w-100">
+    
+                    <div class="card-body pb-0 text-center">
+                      <h5 class="m-2">
+                          {{birthDayContactsToday}} Cumpleaños hoy
+                      </h5>
+                      <div class="pb-4">
+                          <i class="big-icon fa fa-birthday-cake"></i>
+                        </div>
+                    </div>
+    
+                  </div>
+            </div>
+           
+            <div class="offset-md-2 col-12 col-md-8 mt-2">
+                <button title="Ver listado" routerLink="/contacts" type="button" class="btn btn-block lightgray w-100 hvr-sweep-to-right">
+                    <h5 class="m-2">
+                         Mis contactos
+                    </h5>
+                    <div class="pb-2">
+                        <i class="big-icon fa fa-users"></i>
+                      </div>
+                </button>
+            </div>
+            
+        </div>
+    
+    </div>
+
+</div>

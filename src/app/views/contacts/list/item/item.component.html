@@ -1,0 +1,28 @@
+<div  class="row m-0 p-0">
+
+    <div class="col-12 col-md-2 text-center mb-1">
+       <i class="medium-icon fa fa-user-circle"></i>
+    </div>
+
+    <div class="col-12 col-md-6 text-left mb-1">
+        <h5>{{contact.fullName}}</h5>
+        <h6>{{contact.identification}}</h6>
+        <h6>{{contact.birthDate.toDateString()}}</h6>
+    </div>
+
+    <div class="col-12 col-md-4 mb-1">
+        <div class="row text-center">
+            <div class="col-6">
+                <button (click)="editEvent(contact.id)" title="Editar contacto" type="button" class="btn btn-secondary w-100 btn-lg">
+                    <i class="fa fa-user-edit"></i>   
+                </button>
+            </div>
+            <div class="col-6">
+                <button (click)="deleteEvent(contact.id)" title="Eliminar contacto" type="button" class="btn btn-secondary w-100 btn-lg">
+                    <i class="fa fa-user-times"></i>   
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

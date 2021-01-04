@@ -1,0 +1,37 @@
+<div class="animate__animated animate__fadeIn animate__fast">
+    
+    <app-header></app-header>
+    
+    <div class="p-4">
+    
+        <div class="row">
+        
+            <div class="col-12">
+                <button routerLink="create" type="button" class="btn btn-md lightgray float-end hvr-sweep-to-right">
+                    <i class="fa fa-user-plus"></i> Nuevo
+                </button>
+            </div>
+
+            <div *ngIf="contacts.length; else noContacts" class="col-12 mt-2">
+                <div *ngFor="let contact of contacts" class="my-4 p-3 rounded lightgray hvr-grow">
+                   
+                    <contact-list-item
+                        [contact]="contact"
+                        (edit)="edit($event)"
+                        (delete)="delete($event)"
+                    ></contact-list-item>
+
+                </div>
+            </div>
+
+            <ng-template #noContacts>
+                <div class="col-12 text-center">
+                    <h4 class="text-muted"> Ninguno </h4>    
+                </div>
+            </ng-template>
+            
+        </div>
+    
+    </div>
+
+</div>
