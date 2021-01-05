@@ -6,9 +6,9 @@
         
         <form class="row g-3" #form="ngForm" (submit)="onSubmit()">
 
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
                 <h6 class="mt-2 text-muted">Identificacion:</h6>
-                <div class="input-group mb-3">
+                <div class="input-group mb-2">
                     <span class="input-group-text" >
                         <i class="fa fa-id-card" [ngClass]="{'text-danger': identification.touched && identification.invalid, 'text-success': identification.valid}"></i>
                     </span>
@@ -25,9 +25,9 @@
                 </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
                 <h6 class="mt-2 text-muted">Nombres:</h6>
-                <div class="input-group mb-3">
+                <div class="input-group mb-2">
                     <span class="input-group-text" >
                         <i class="fa fa-pen" [ngClass]="{'text-danger': first_name.touched && first_name.invalid, 'text-success': first_name.valid}"></i>
                     </span>
@@ -41,9 +41,9 @@
                 </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
                 <h6 class="mt-2 text-muted">Apellidos:</h6>
-                <div class="input-group mb-3">
+                <div class="input-group mb-2">
                 <span class="input-group-text" >
                         <i class="fa fa-pen" [ngClass]="{'text-danger': last_name.touched && last_name.invalid, 'text-success': last_name.valid}"></i>
                     </span>
@@ -57,9 +57,9 @@
                 </div>
             </div>
             
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
                 <h6 class="mt-2 text-muted">Direccion:</h6>
-                <div class="input-group mb-3">
+                <div class="input-group mb-2">
                     <span class="input-group-text" >
                         <i class="fa fa-map-marked-alt" [ngClass]="{'text-danger': address.touched && address.invalid, 'text-success': address.valid}"></i>
                     </span>
@@ -73,9 +73,9 @@
                 </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
                 <h6 class="mt-2 text-muted">Telefono:</h6>
-                <div class="input-group mb-3">
+                <div class="input-group mb-2">
                     <span class="input-group-text" >
                         <i class="fa fa-mobile-alt" [ngClass]="{'text-danger': phone.touched && phone.invalid, 'text-success': phone.valid}"></i>
                     </span>
@@ -92,9 +92,9 @@
                 </div>
             </div>
            
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
                 <h6 class="mt-2 text-muted">Fecha de nacimiento:</h6>
-                <div class="input-group mb-3">
+                <div class="input-group mb-2">
 
                     <span class="input-group-text" >
                         <i class="fa fa-calendar-day" [ngClass]="{'text-danger': birth_date.touched && birth_date.invalid, 'text-success': birth_date.valid}"></i>
@@ -121,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="col-12">
+            <div class="col-12 mt-3">
                 <button type="reset" class="btn btn-secondary ml-2 float-start">Limpiar</button>
                 <button type="submit" [disabled]="form.invalid" class="btn btn-primary mr-2 float-end">Actualizar</button>
             </div>
